@@ -1,0 +1,70 @@
+{
+  "name": "optimized-drawing-app",
+  "version": "1.0.0",
+  "description": "High-performance HTML5 drawing application with advanced optimizations",
+  "main": "app.js",
+  "scripts": {
+    "dev": "http-server . -p 3000 -c-1 --cors",
+    "build": "npm run minify && npm run compress && npm run generate-icons",
+    "minify": "npm run minify:js && npm run minify:css && npm run minify:html",
+    "minify:js": "terser app.js lazy-features.js performance-monitor.js -o dist/app.min.js --compress --mangle --source-map",
+    "minify:css": "cleancss -o dist/styles.min.css styles.css",
+    "minify:html": "html-minifier-terser index.html -o dist/index.html --remove-comments --collapse-whitespace --minify-css --minify-js",
+    "compress": "gzip -k dist/*.js dist/*.css dist/*.html",
+    "generate-icons": "node scripts/generate-icons.js",
+    "analyze": "npm run analyze:bundle && npm run analyze:performance",
+    "analyze:bundle": "bundlesize",
+    "analyze:performance": "lighthouse http://localhost:3000 --output=json --output-path=./reports/lighthouse.json",
+    "test": "jest",
+    "test:performance": "jest --testPathPattern=performance",
+    "lint": "eslint *.js",
+    "lint:fix": "eslint *.js --fix",
+    "precommit": "npm run lint && npm run test",
+    "serve": "http-server dist -p 8080 -c-1 --cors"
+  },
+  "keywords": [
+    "drawing",
+    "canvas",
+    "html5",
+    "performance",
+    "optimization",
+    "pwa"
+  ],
+  "author": "Performance Optimized Drawing App",
+  "license": "MIT",
+  "devDependencies": {
+    "terser": "^5.19.0",
+    "clean-css-cli": "^5.6.2",
+    "html-minifier-terser": "^7.2.0",
+    "bundlesize": "^0.18.1",
+    "lighthouse": "^10.4.0",
+    "jest": "^29.6.0",
+    "eslint": "^8.45.0",
+    "http-server": "^14.1.1",
+    "sharp": "^0.32.0"
+  },
+  "bundlesize": [
+    {
+      "path": "./dist/app.min.js",
+      "maxSize": "50 kB"
+    },
+    {
+      "path": "./dist/styles.min.css",
+      "maxSize": "10 kB"
+    },
+    {
+      "path": "./dist/index.html",
+      "maxSize": "5 kB"
+    }
+  ],
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not dead",
+    "not ie 11"
+  ],
+  "engines": {
+    "node": ">=14.0.0",
+    "npm": ">=6.0.0"
+  }
+}

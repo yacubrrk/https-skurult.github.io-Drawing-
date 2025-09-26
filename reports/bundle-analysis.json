@@ -1,0 +1,62 @@
+{
+  "totalFiles": 11,
+  "totalSize": 30010,
+  "largestFiles": [
+    {
+      "file": "app.min.js",
+      "size": 22241,
+      "type": "js"
+    },
+    {
+      "file": "index.html",
+      "size": 2910,
+      "type": "html"
+    },
+    {
+      "file": "styles.min.css",
+      "size": 2456,
+      "type": "css"
+    },
+    {
+      "file": "icons/icon-144x144.svg",
+      "size": 307,
+      "type": "icons"
+    },
+    {
+      "file": "icons/icon-192x192.svg",
+      "size": 307,
+      "type": "icons"
+    },
+    {
+      "file": "icons/icon-384x384.svg",
+      "size": 307,
+      "type": "icons"
+    },
+    {
+      "file": "icons/icon-72x72.svg",
+      "size": 301,
+      "type": "icons"
+    },
+    {
+      "file": "icons/icon-96x96.svg",
+      "size": 301,
+      "type": "icons"
+    },
+    {
+      "file": "icons/icon-512x512.svg",
+      "size": 294,
+      "type": "icons"
+    },
+    {
+      "file": "icons/icon-128x128.svg",
+      "size": 293,
+      "type": "icons"
+    },
+    {
+      "file": "icons/icon-152x152.svg",
+      "size": 293,
+      "type": "icons"
+    }
+  ],
+  "recommendations": []
+}

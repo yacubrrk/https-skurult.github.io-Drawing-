@@ -1,0 +1,46 @@
+{
+  "version": "1.0.0",
+  "timestamp": 1758916474896,
+  "assets": {
+    "js": [
+      "app.min.js"
+    ],
+    "css": [
+      "styles.min.css"
+    ],
+    "html": [
+      "index.html"
+    ],
+    "icons": [
+      "icons/icon-128x128.svg",
+      "icons/icon-144x144.svg",
+      "icons/icon-152x152.svg",
+      "icons/icon-192x192.svg",
+      "icons/icon-384x384.svg",
+      "icons/icon-512x512.svg",
+      "icons/icon-72x72.svg",
+      "icons/icon-96x96.svg"
+    ]
+  },
+  "sizes": {
+    "js": {
+      "app.min.js": 22241
+    },
+    "css": {
+      "styles.min.css": 2456
+    },
+    "html": {
+      "index.html": 2910
+    },
+    "icons": {
+      "icons/icon-128x128.svg": 293,
+      "icons/icon-144x144.svg": 307,
+      "icons/icon-152x152.svg": 293,
+      "icons/icon-192x192.svg": 307,
+      "icons/icon-384x384.svg": 307,
+      "icons/icon-512x512.svg": 294,
+      "icons/icon-72x72.svg": 301,
+      "icons/icon-96x96.svg": 301
+    }
+  }
+}
